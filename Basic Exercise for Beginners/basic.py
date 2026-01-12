@@ -76,4 +76,85 @@ def is_first_and_last_identical(list):
 print(is_first_and_last_identical(numbers))
 '''
 
+#Exercise 6: Display numbers divisible by 5
+#Write a Python code to display numbers from a list divisible by 5
+'''
+list=[10, 20, 33, 46, 55]
 
+def is_divisible_by_nr(list,divisor):
+  for nr in list:
+    if nr%divisor==0:
+      print(nr)
+
+is_divisible_by_nr(list,5)
+'''
+
+#Exercise 7: Find the number of occurrences of a substring in a string
+#Write a Python code to find how often the substring “Emma” appears in the given string.
+'''
+str_example = "Emma is good developer. Emma is a writer"
+sub_str = "Emma"
+
+def find_str_occurrences(str,word):
+  return str.count(word)
+
+print(find_str_occurrences(str_example,sub_str))
+'''
+
+#Exercise 8: Print the following pattern:
+#1
+#22
+#333
+#4444
+#55555
+
+#def print_pattern(nr_of_rep):
+'''
+  for n in range(1,nr_of_rep+1):
+    occurrence=0
+    line=""
+    while occurrence<n:
+      line +=str(n)
+      occurrence+=1
+    print(line)
+'''
+'''
+  for num in range(nr_of_rep+1):
+    for i in range(num):
+        print (num,end=' ') 
+    print("\n")
+'''
+#print_pattern(8)
+
+#Exercise 9: Check Palindrome Number
+#Write a Python code to check if the given number is a palindrome. A palindrome number reads the same forwards and backward. For example, 545 is a palindrome number.
+'''
+def check_palindrome(num):
+
+  print("original number", num)
+  if str(num)==str(num)[::-1]:
+    print("Yes. given number is palindrome number")
+  else:
+    print("No. given number is not palindrome number")
+
+check_palindrome(4544)
+'''
+
+#Exercise 10: Merge two lists using the following condition
+#Given two lists of numbers, write Python code to create a new list containing odd numbers from the first list and even numbers from the second list.
+'''
+list1 = [10, 20, 25, 30, 35]
+list2 = [40, 45, 60, 75, 90]
+
+def special_list_combine(l1,l2):
+  newList=[]
+  for el in l1:
+    if el%2!=0:
+      newList.append(el)
+  for el in l2:
+    if el%2==0:
+      newList.append(el)
+  return newList
+
+print(special_list_combine(list1, list2))
+'''
