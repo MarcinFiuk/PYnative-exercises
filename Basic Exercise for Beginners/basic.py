@@ -153,8 +153,90 @@ def special_list_combine(l1,l2):
       newList.append(el)
   for el in l2:
     if el%2==0:
-      newList.append(el)
+      newList.append(el)clear
   return newList
 
 print(special_list_combine(list1, list2))
 '''
+
+#Exercise 11: Get each digit from a number in the reverse order.
+#For example, If the given integer number is 7536, the output shall be “6 3 5 7“, with a space separating the digits.
+'''
+number = 7536
+
+def digit_in_reverse_order(n):
+  print("Starting number", n)
+  result=""
+  while n>0:
+    last_dig = n % 10
+    result+=str(last_dig)
+    n = n//10
+    if n!=10:
+      result+=" "
+  return result
+
+print(digit_in_reverse_order(number))
+'''
+
+#Exercise 12: Calculate income tax
+#Calculate income tax for the given income by adhering to the rules below
+#Taxable Income	|Rate (in %)
+#First $10,000	|0
+#Next $10,000	  |10
+#The remaining	|20
+'''
+def calculate_income_tax(income):
+  tax=0
+
+  if income<=10000:
+    tax = 0
+  elif income <=20000:
+    rest = income - 10000
+    tax = rest*0.1
+  else:
+    rest = income-20000
+    tax = 10000*0.1 + rest*0.2
+  
+  return tax
+
+print(calculate_income_tax(45000))
+'''  
+
+#Exercise 13: Print multiplication table from 1 to 10
+#The multiplication table from 1 to 10 is a table that shows the products of numbers from 1 to 10.
+#Write a code to generates a complete multiplication table for numbers 1 through 10.
+'''
+def print_multiplication_table():
+  for el in range(1,11):
+    for internal_el in range(1,11):
+      print(internal_el*el, end=" ")
+    print("\t")
+
+print_multiplication_table()
+'''
+
+#Exercise 14: Print a downward half-pyramid pattern of stars
+'''
+def print_downwards_half_pyramid(size):
+  for el in range(size,0,-1):
+    for internal_el in range(1,el+1):
+      print("*",end=" ")
+    print('\t')
+
+print_downwards_half_pyramid(5)
+'''
+
+#Exercise 15: Get an int value of base raises to the power of exponent
+#Write a function called exponent(base, exp) that returns an int value of base raises to the power of exp.
+#Note here exp is a non-negative integer, and the base is an integer.
+
+def pow(base,exponent):
+  if base <0 or exponent<0:
+    return "value must to be bigger than 0"
+  res = 1
+  for _ in range(1,exponent+1):
+    res *=base
+
+  print(res)
+
+pow(5,4)
