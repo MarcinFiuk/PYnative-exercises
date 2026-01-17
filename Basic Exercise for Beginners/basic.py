@@ -310,7 +310,7 @@ print(get_alternate(get_all_prime_till(20)))
 #3 3 3 
 #4 4 
 #5 
-
+'''
 def print_reverse_number_pattern(n):
   max_range = n+1
   for i in range(1,max_range):
@@ -319,3 +319,44 @@ def print_reverse_number_pattern(n):
     print()
 
 print_reverse_number_pattern(5)
+'''
+
+#Exercise 21: Check if a user-entered string contains any digits using a for loop
+'''
+str1="Pynative123Python"
+str2="PYnative"
+
+def contains_digits(phrase):
+  for i in range(len(phrase)):
+    if phrase[i].isnumeric():
+      print("The string contains at least one digit.")
+      return
+  print("The string does not contain any digits.")
+
+contains_digits(str1)
+'''
+
+#Exercise 22: Capitalize the first letter of each word in a string
+'''
+str1 = "pynative.com is for python lovers"
+def capitalize_first_letter_of_each_word(str):
+  list = str.split(" ")
+  capitalize_list = [word.capitalize() for word in list]
+  new_str = " ".join(capitalize_list)
+  return new_str
+
+print(capitalize_first_letter_of_each_word(str1))
+'''
+
+#Exercise 23: Create a simple countdown timer using a while loop.
+
+import time 
+
+def countdown(sec):
+  while sec>0:
+    print(f"Time remaining: {sec} seconds")
+    time.sleep(1)
+    sec -=1
+  print("Time's up!")
+
+countdown(5)
