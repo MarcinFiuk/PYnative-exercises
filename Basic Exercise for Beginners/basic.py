@@ -349,7 +349,7 @@ print(capitalize_first_letter_of_each_word(str1))
 '''
 
 #Exercise 23: Create a simple countdown timer using a while loop.
-
+'''
 import time 
 
 def countdown(sec):
@@ -360,3 +360,4 @@ def countdown(sec):
   print("Time's up!")
 
 countdown(5)
+'''
