@@ -117,7 +117,7 @@ display_negative_num(-10,-1)
 '''
 
 #Exercise 10: Display a message “Done” after the successful execution of the for loop
-
+'''
 def print_message_after_loop(msg):
   for i in range(5):
     print(i)
@@ -125,4 +125,73 @@ def print_message_after_loop(msg):
     print(msg)
 
 print_message_after_loop("Done")
+'''
+
+#Exercise 11: Print all prime numbers within a range
+'''
+def print_primes(start,end):
+  print(f"Prime numbers between {start} and {end} are:")
+  for num in range(start,end+1):
+    if num<=1:
+      continue
+    for i in range(2, int(num ** 0.5) + 1):
+      if num % i == 0:
+        break
+    else:
+        print(num)
+
+print_primes(25,50)
+'''
+
+#Exercise 12: Display Fibonacci series up to 10 terms
+'''
+def display_Fibonacci(num):
+  num1=0
+  num2=1
+  for n in range(1,num+1):
+    print(num1,end=" ")
+    result=num1+num2
+    num1=num2
+    num2=result
+
+display_Fibonacci(10)
+'''
+
+#Exercise 13: Find the factorial of a given number
+'''
+def count_factorial(num):
+  result=1
+
+  for n in range(2,num+1):
+    result *=n
+
+  return result
+
+print(count_factorial(5))
+'''
+
+#Exercise 14: Reverse a integer number
+'''
+def reverse_int(num):
+  reverse=0
+  while num>0:
+    digit = num%10
+    reverse =reverse*10+digit
+    num = num//10
+  
+  print(reverse)
+
+reverse_int(76543)
+'''
+
+#Exercise 15: Print elements from a given list present at odd index positions
+
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+def print_odd_index_numbers(list):
+  for el in list[1::2]:
+    print(el, end=" ")
+
+
+print_odd_index_numbers(my_list)
 
