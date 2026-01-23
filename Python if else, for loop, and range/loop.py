@@ -185,7 +185,7 @@ reverse_int(76543)
 '''
 
 #Exercise 15: Print elements from a given list present at odd index positions
-
+'''
 my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 def print_odd_index_numbers(list):
@@ -194,4 +194,90 @@ def print_odd_index_numbers(list):
 
 
 print_odd_index_numbers(my_list)
+'''
 
+#Exercise 16: Calculate the cube of all numbers from 1 to a given number
+
+#Write a Python program to print the cube of all numbers from 1 to a given number
+'''
+import math
+input_number = 6
+
+def print_all_cubes(n):
+  for num in range(1,n+1):
+    print(f"Current Number is : {num}  and the cube is {math.pow(num,3)}")
+
+print_all_cubes(input_number)
+'''
+
+#Exercise 17: Find the sum of a series of a number up to n terms
+#Write a program to calculate the sum of this series up to n terms. For example, if the number is 2 and the number of terms is 5, then the series will be 2+22+222+2222+22222=2469
+'''
+num = 2
+terms = 5
+
+def sum_of_series(n,terms):
+  sum=0
+  number=n
+  for i in range(terms):
+    sum+=number
+    number=number*10+n
+  
+  return sum
+
+print(sum_of_series(num,terms))
+'''
+
+#Exercise 18: Print the following pattern
+#* 
+#* * 
+#* * * 
+#* * * * 
+#* * * * * 
+#* * * * 
+#* * * 
+#* * 
+#*
+'''
+def print_pattern(deep_lv):
+  for i in range(deep_lv*2):
+    if i<=deep_lv:
+      level = i
+    else:
+      level = deep_lv - (i-deep_lv)
+    for j in range(level):
+      print("*", end=" ")
+    print()
+
+print_pattern(5)
+'''
+
+#Exercise 19: Print Full Multiplication Table
+#The multiplication table from 1 to 10 is a table that shows the products of numbers from 1 to 10.
+'''
+def print_multiplication_table(num):
+  for i in range(1,num+1):
+    print(f"multiplication table of: {i}")
+    for j in range (1,11):
+      print(j*i, end=" ")
+    print()
+
+print_multiplication_table(10)
+'''
+
+#Exercise 20: Print the alternate numbers pattern
+#1  
+#2 3  
+#4 5 6  
+#7 8 9 10  
+#11 12 13 14 15
+
+def print_pattern(lvl):
+  starting_nr=0
+  for i in range(1,lvl+1):
+    for j in range (0,i):
+      starting_nr +=+1
+      print(starting_nr, end=" ")
+    print()
+
+print_pattern(5)
