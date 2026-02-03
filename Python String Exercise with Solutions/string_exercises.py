@@ -176,9 +176,8 @@ count_average_from_string(str1)
 '''
 
 #Exercise 10: Write a program to count occurrences of all characters within a string
-
-str1 = "AppleAppleapple"
-
+'''
+str1 = "Apple"
 def count_occurrence_of_characters(str):
   dic={}
   for l in str:
@@ -188,3 +187,64 @@ def count_occurrence_of_characters(str):
   print(dic)
 
 count_occurrence_of_characters(str1)
+'''
+
+#Exercise 11: Reverse a given string
+'''
+s1 = "PYnative"
+def reverse_string(str):
+  print(str[::-1])
+
+reverse_string(s1)
+'''
+#Exercise 12: Find the last position of a given substring
+'''
+str1 = "Emma is a data scientist who knows Python. Emma works at google."
+word="Emma"
+
+def find_last_occurrence(sentence,word):
+  index = sentence.rfind(word)
+  print(f"Last occurrence of {word} starts at index {index}")
+
+find_last_occurrence(str1,word)
+'''
+
+#Exercise 13: Split a string on hyphens
+#Write a program to split a given string on hyphens and display each substring.
+'''
+s1 = "Emma-is-a-data-scientist"
+
+def split_str(str):
+  words = str.split("-")
+  print(words)
+  for l in words:
+    print(l)
+
+split_str(s1)
+'''
+
+#Exercise 14: Remove empty strings from a list of strings
+'''
+str_list = ["Emma", "Jon", "", "Kelly", None, "Eric", ""]
+
+def remove_empty_str(list):
+  new_list =[]
+  for word in list:
+    if word:
+      new_list.append(word)
+  print(new_list)
+
+remove_empty_str(str_list)
+'''
+
+#Exercise 15: Remove special symbols / punctuation from a string
+
+s1 = "/*Jon is @developer & musician"
+
+import string
+
+def remove_special_characters(str1):
+  new_str = str1.translate(str.maketrans('', '', string.punctuation)).replace("  "," ")
+  print(new_str)
+
+remove_special_characters(s1)
