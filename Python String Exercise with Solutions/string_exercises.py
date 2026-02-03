@@ -238,7 +238,7 @@ remove_empty_str(str_list)
 '''
 
 #Exercise 15: Remove special symbols / punctuation from a string
-
+'''
 s1 = "/*Jon is @developer & musician"
 
 import string
@@ -248,3 +248,53 @@ def remove_special_characters(str1):
   print(new_str)
 
 remove_special_characters(s1)
+'''
+
+# Exercise 16: Removal all characters from a string except integers
+'''
+s1 = 'I am 25 years and 10 months old'
+def get_integers(str):
+  result= ""
+  for l in str:
+    if l.isdigit():
+      result +=l
+  print(result)
+
+get_integers(s1)
+'''
+
+# Exercise 17: Find words with both alphabets and numbers
+
+# Write a program to find words with both alphabets and numbers from an input string.
+'''
+s1 = "Emma25 is Data scientist50 and AI Expert"
+
+def get_word_with_alphabet_and_number(str):
+  new_list = []
+  list = str.split(' ')
+
+  for word in list:
+    if any(char.isdigit() for char in word) and any(char.isalpha() for char in word):
+      new_list.append(word)
+
+  print(new_list)
+
+get_word_with_alphabet_and_number(s1)
+'''
+
+# Exercise 18: Replace each special symbol with # in the following string
+
+s1 = '/*Jon is @developer & musician!!'
+# Expected: ##Jon is #developer # musician##
+
+def replace_symbols_with_hash(string):
+  table = str.maketrans({
+    '/':'#',
+    '*':'#',
+    '@':'#',
+    '&':'#',
+    '!':'#'})
+  new_str = string.translate(table)
+  print(new_str)
+
+replace_symbols_with_hash(s1)
