@@ -68,7 +68,7 @@ reverse_list(list1)
 '''
 
 # Exercise 5: Turn every item of a list into its square
-
+'''
 numbers = [1, 2, 3, 4, 5, 6, 7]
 
 def get_square(l):
@@ -77,3 +77,69 @@ def get_square(l):
   print(l)
 
 get_square(numbers)
+'''
+
+# Exercise 6: Find Maximum and Minimum
+'''
+data = [8, 2, 15, 1, 9]
+
+def find_max_and_min(l):
+  max_val = max(l)
+  min_val = min(l)
+  print(f'Largest number: {max_val}')
+  print(f'Smallest number: {min_val}')
+
+find_max_and_min(data)
+'''
+
+# Exercise 7: Count Occurrences
+# Count and print how many times 'Football' appears in list.
+'''
+sports = ['Cricket', 'Football', 'Hockey', 'Football', 'Tennis']
+
+def find_occurrence(l,word):
+  occurrence = l.count(word)
+  print(f'Word {word} appeared {occurrence} times')
+  
+find_occurrence(sports,"Football")
+'''
+
+# Exercise 8: Sort a list of numbers
+'''
+numbers = [5, 2, 8, 1, 9]
+
+def sort_list_ascending(l):
+  print(f'Original list: {l}')
+  # l.sort()
+  # print(f'Sorted list {l}')
+  new_list = sorted(l)
+  print(f'Sorted list: {new_list}')
+
+sort_list_ascending(numbers)
+'''
+
+# Exercise 9: Create a copy of a list
+'''
+l1= [10, 20, 30]
+
+def create_copy(l):
+  new_list = l.copy()
+  l.append(40)
+  print(f'list A: {l}')
+  print(f'list B: {new_list}')
+
+create_copy(l1)
+'''
+
+# Exercise 10: Combine two lists
+
+list_a = [1, 2]
+list_b = [3, 4]
+
+def combine_two_lists(l1,l2):
+  new_list_A = l1+l2
+  l1.extend(l2)
+  print(f'combined list: {new_list_A}')
+  print(f'combined list: {l1}')
+
+combine_two_lists(list_a,list_b)
