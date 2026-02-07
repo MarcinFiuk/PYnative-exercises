@@ -283,7 +283,7 @@ get_word_with_alphabet_and_number(s1)
 '''
 
 # Exercise 18: Replace each special symbol with # in the following string
-
+'''
 s1 = '/*Jon is @developer & musician!!'
 # Expected: ##Jon is #developer # musician##
 
@@ -298,3 +298,4 @@ def replace_symbols_with_hash(string):
   print(new_str)
 
 replace_symbols_with_hash(s1)
+'''
