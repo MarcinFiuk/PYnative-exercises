@@ -132,7 +132,7 @@ create_copy(l1)
 '''
 
 # Exercise 10: Combine two lists
-
+'''
 list_a = [1, 2]
 list_b = [3, 4]
 
@@ -143,3 +143,59 @@ def combine_two_lists(l1,l2):
   print(f'combined list: {l1}')
 
 combine_two_lists(list_a,list_b)
+'''
+
+# Exercise 11: Remove empty strings from the list of strings
+'''
+list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+
+def remove_empty_elements(l):
+  filtered_list = filter(None, l)
+  print(list(filtered_list))
+
+remove_empty_elements(list1)
+'''
+
+# Exercise 12: Remove Duplicates from list
+'''
+list_with_duplicates = [1, 2, 2, 3, 1, 4, 5, 4]
+
+def remove_duplicates(l):
+  new_list = list(set(l))
+  print(new_list)
+
+remove_duplicates(list_with_duplicates)
+'''
+
+# Exercise 13: Remove all occurrences of a specific item from a list
+'''
+list1 = [5, 20, 15, 20, 25, 50, 20]
+
+def remove_all_occurrence_of_element(l,el):
+
+  while el in l:
+    l.remove(20)
+
+  print(l)
+
+remove_all_occurrence_of_element(list1,20)
+'''
+
+# Exercise 14: List Comprehension for Numbers
+# Use list comprehension to create a new list containing only the numbers from a given list.
+'''
+my_list = [1, 2, 3, 'Jessa', 4, 5, 'Kelly', 'Jhon', 6]
+
+def extract_numbers(l):
+  new_list = [el for el in l if isinstance(el, (int,float))]
+  print(new_list)
+
+extract_numbers(my_list)
+'''
+
+# Exercise 15: Access Nested Lists
+# Given a nested list, print the element '55'.
+
+nested_list = [[10, 20, 30], [44, 55, 66], [77, 87, 99]]
+
+print(nested_list[1][1])
