@@ -195,7 +195,79 @@ extract_numbers(my_list)
 
 # Exercise 15: Access Nested Lists
 # Given a nested list, print the element '55'.
-
+'''
 nested_list = [[10, 20, 30], [44, 55, 66], [77, 87, 99]]
-
 print(nested_list[1][1])
+'''
+
+# Exercise 16: Flatten Nested List
+'''
+list_of_lists = [[1, 2], [3, 4], [5, 6, 7],[8,8,8,[9,9]]]
+
+def flatten_nested_list(list_of_lists, new_list):
+  for el in list_of_lists:
+    if type(el)==list:
+      flatten_nested_list(el, new_list)
+    else:
+      new_list.append(el)
+  return new_list
+
+print(flatten_nested_list(list_of_lists,[]))
+'''
+
+# Exercise 17: Concatenate two lists index-wise
+# Expected output: ['My', 'name', 'is', 'Kelly']
+'''
+list1 = ["M", "na", "i", "Ke"]
+list2 = ["y", "me", "s", "lly"]
+
+def concatenate_two_lists_index_wise(l1,l2):
+  # new_list = []
+  # for i in range(len(l1)):
+  #   new_el = l1[i]+l2[i]
+  #   new_list.append(new_el)
+  # print(new_list)
+  new_list = [i + j for i, j in zip(l1,l2)]
+  print(new_list)
+
+concatenate_two_lists_index_wise(list1,list2)
+'''
+
+# Exercise 18: Concatenate two lists in the following order
+# Expected output: ['Hello Dear', 'Hello Sir', 'take Dear', 'take Sir']
+'''
+list1 = ["Hello ", "take "]
+list2 = ["Dear", "Sir"]
+
+def concatenate_all_with_all(l1,l2):
+  # new_list=[]
+  # for i in l1:
+  #   for j in l2:
+  #     new_list.append(i+''+j)
+  new_list = [i+" "+j for i in l1 for j in l2]
+  print(new_list)
+
+concatenate_all_with_all(list1,list2)
+'''
+
+# Exercise 19: Iterate both lists simultaneously
+'''
+list1 = [10, 20, 30, 40]
+list2 = [100, 200, 300, 400]
+
+def iterate_simultaneously(l1,l2):
+  for i,j in zip(l1, l2[::-1]):
+    print(i,j)
+
+iterate_simultaneously(list1,list2)
+'''
+
+# Exercise 20: Add new item to list after a specified item
+# Write a program to add item 7000 after 6000 in the following Python List
+'''
+list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+
+list1[2][2].append(7000)
+
+print(list1)
+'''
