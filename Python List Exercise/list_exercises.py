@@ -272,7 +272,7 @@ list1[2][2].append(7000)
 print(list1)
 '''
 
-# Exercise 22: Extend nested list by adding the sublist
+# Exercise 21: Extend nested list by adding the sublist
 # You have given a nested list. Write a program to extend it by adding the sublist ["h", "i", "j"] in such a way that it will look like the following list.
 '''
 list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
@@ -282,9 +282,9 @@ list1[2][1][2].extend(sub_list)
 print(list1)
 '''
 
-# Exercise 23: Replace list’s item with new value if found
+# Exercise 22: Replace list’s item with new value if found
 # You have given a Python list. Write a program to find value 20 in the list, and if it is present, replace it with 200. Only update the first occurrence of an item.
-
+'''
 list1 = [5, 10, 15, 20, 25, 50, 20]
 
 def replace_value(l, search_val, new_val):
@@ -293,3 +293,4 @@ def replace_value(l, search_val, new_val):
   print(l)
 
 replace_value(list1,20,200)
+'''
