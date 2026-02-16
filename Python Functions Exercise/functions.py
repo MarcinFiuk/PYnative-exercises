@@ -109,9 +109,70 @@ find_max(l1)
 
 # Exercise 10: Call Function using both positional and keyword arguments
 # Define a function describe_pet(animal_type, pet_name) that prints a description of a pet. Call this function using both positional and keyword arguments.
-
+'''
 def describe_pet(animal_type, pet_name):
   print(animal_type, pet_name)
 
 describe_pet('dog', 'Bingo')
 describe_pet(animal_type='dog',pet_name='Bingo')
+'''
+
+# Exercise 11: Create a function with keyword arguments
+# Create a function print_info(**kwargs) that accepts keyword arguments and prints the key-value pairs. Call it with different keyword arguments
+'''
+def print_info(**kwargs):
+  if kwargs:
+   for key,val in kwargs.items():
+     print(key,val)
+  else:
+    print('No arguments were passed')
+
+print_info(name="Alice", age=30)
+print_info(job="Engineer", salary=75000)
+print_info(country="USA", state="California", zip_code="90210")
+print_info()
+'''
+
+# Exercise 12: Modifies global variable
+# Define a global variable global_var = 10. Write a function that modifies a global variable value.
+'''
+global_var = 10
+def modify_global_var():
+  global global_var
+  global_var = 55
+  print('Global var from inside the function', global_var)
+
+modify_global_var()
+print('Global var from outside after calling the function', global_var)
+'''
+
+# Exercise 13: Write a recursive function to calculate the factorial
+'''
+def factorial(n):
+  if n<0:
+    return ValueError("Factorial is not defined for negative numbers")
+  elif n==0:
+    return 1
+  else:
+    return n * factorial(n - 1)
+  
+print(factorial(5))
+'''
+
+# Exercise 14: Create a lambda function that squares a given number
+'''
+square = lambda x:x*x
+nr = 5
+square_nr = square(nr)
+print(square_nr)
+'''
+
+# Exercise 15: Use a lambda with the filter() function to get all even numbers from a list
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def get_even(l):
+  even = list(filter(lambda x:x%2==0, l))
+  print(even)
+
+get_even(numbers)
