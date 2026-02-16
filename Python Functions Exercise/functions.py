@@ -168,7 +168,7 @@ print(square_nr)
 '''
 
 # Exercise 15: Use a lambda with the filter() function to get all even numbers from a list
-
+'''
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 def get_even(l):
@@ -176,3 +176,42 @@ def get_even(l):
   print(even)
 
 get_even(numbers)
+'''
+
+# Exercise 16: Use a lambda with the map() function to double each element in a list
+'''
+numbers = [1, 2, 3, 4, 5]
+
+def double(l):
+  doubled_list = (list(map(lambda x: x*2, l)))
+  print(doubled_list)
+
+double(numbers)
+'''
+
+# Exercise 17: Use a lambda with the sorted() function to sort a list of tuples based on the second element
+'''
+data = [('apple', 5), ('banana', 2), ('cherry', 8), ('date', 1)]
+
+def sort_list_of_tuples(l):
+  sorted_list = sorted(l, key = lambda item:item[1], reverse=True)
+  print(sorted_list)
+
+sort_list_of_tuples(data)
+'''
+
+# Exercise 18: Create Higher-Order Function
+# Write a function apply_operation(func, x, y) that takes a function func and two numbers x and y as arguments, and returns the result of calling func(x, y). Demonstrate its use with different functions (e.g., addition, subtraction).
+'''
+def apply_operation(func, x, y):
+  print(func(x,y))
+
+def add(a,b):
+  return a+b
+
+def subtract(a,b):
+  return(a-b)
+  
+apply_operation(add, 10, 5)
+apply_operation(subtract,10,5)
+'''
