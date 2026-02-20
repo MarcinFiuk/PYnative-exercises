@@ -56,8 +56,89 @@ print('Empty dictionary', my_dict)
 
 # Exercise 5: Merge two Python dictionaries into one
 # Write a code to merge two dictionaries into a new dictionary and print it.
-
+'''
 dict1 = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
 dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
 new_dic = {**dict1, **dict2}
 print('New dictionary: ',new_dic)
+'''
+
+# Exercise 6: Count Character Frequencies
+# Given a string, create a dictionary where keys are characters and values are their frequencies in the string.
+'''
+string1 = 'Jessa'
+
+def check_frequencies(word):
+  letter_frequencies= {}
+  # for char in word:
+  #   if char in letter_frequencies:
+  #     letter_frequencies[char] = letter_frequencies[char]+1
+  #   else:
+  #     letter_frequencies[char] =1
+
+  # Second solution
+  for char in word:
+    # Use get() method: if char is in dict, get its value; otherwise, default to 0
+  #   letter_frequencies[char] = letter_frequencies.get(char, 0) + 1
+  # print(letter_frequencies)
+
+check_frequencies(string1)
+'''
+
+# Exercise 7: Access Nested Dictionary
+# Given a nested dictionary {'person': {'name': 'Alice', 'age': 30}}, print Alice’s age.
+'''
+data = {'person': {'name': 'Alice', 'age': 30}}
+print(data['person']['age'])
+'''
+
+# Exercise 8: Print the value of key ‘history’ from nested dict
+'''
+sampleDict = {
+    "class": {
+        "student": {
+            "name": "Mike",
+            "marks": {
+                "physics": 70,
+                "history": 80
+            }
+        }
+    }
+}
+
+print(sampleDict["class"]['student']['marks']['history'])
+'''
+
+# Exercise 9: Modify Nested Dictionary
+# In the below dictionary, change name to ‘Jessa’.
+'''
+nested_student_dict = {
+    "class": {
+        "student": {
+            "name": "Mike",
+            "marks": {
+                "physics": 70,
+                "history": 80
+            }
+        }
+    }
+}
+nested_student_dict["class"]['student']['name'] = "Jessa"
+print(nested_student_dict)
+'''
+
+# Exercise 10: Initialize dictionary with default values
+# In Python, we can initialize the keys with the same values.
+
+employees = ['Kelly', 'Emma']
+defaults = {"designation": 'Developer', "salary": 8000}
+
+new_dic = {}
+
+for i in range(len(employees)):
+  new_dic.setdefault(employees[i],defaults)
+
+print(new_dic)
+
+new_dic1 = dict.fromkeys(employees,defaults)
+print(new_dic1)
