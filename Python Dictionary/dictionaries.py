@@ -271,7 +271,7 @@ print(sorted_dict_1)
 
 # Exercise 20: Check if All Values are Unique
 # Write a function that takes a dictionary and returns True if all values in the dictionary are unique, False otherwise.
-
+'''
 dict1 = {'a': 1, 'b': 2, 'c': 3}             # All values unique
 dict2 = {'x': 10, 'y': 20, 'z': 10}          # Value 10 is duplicated
 dict3 = {} # Empty dictionary (all values are vacuously unique)
@@ -287,3 +287,5 @@ def is_unique(el):
 is_unique(dict1)
 is_unique(dict2)
 is_unique(dict3)
+'''
+#
