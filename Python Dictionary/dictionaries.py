@@ -209,7 +209,7 @@ print(sample_dict)
 
 # Exercise 15: Get the key of a minimum value
 # Write a code to print the key of a minimum value from the following dictionary.
-
+'''
 sample_dict = {
   'Physics': 82,
   'Math': 65,
@@ -218,3 +218,72 @@ sample_dict = {
 
 min_val = min(sample_dict)
 print(min_val)
+'''
+
+# Exercise 16: Change value of a key in a nested dictionary
+# Write a Python program to change Brad’s salary to 8500 in the following dictionary.
+'''
+sample_dict = {
+    'emp1': {'name': 'Jhon', 'salary': 7500},
+    'emp2': {'name': 'Emma', 'salary': 8000},
+    'emp3': {'name': 'Brad', 'salary': 500}
+}
+sample_dict['emp3']['salary'] = 8500
+
+print(sample_dict)
+'''
+
+# Exercise 17: Invert Dictionary
+# Write a code to swap keys and values in a dictionary. Assume all values are unique
+'''
+# Inverted dictionary 1: {1: 'a', 2: 'b', 3: 'c'}
+original_dictionary= {'a': 1, 'b': 2, 'c': 3}
+inverted_dictionary = {val:key for key, val in original_dictionary.items()}
+
+print(f"Original dictionary: {original_dictionary}")
+print(f"Inverted dictionary: {inverted_dictionary}")
+'''
+
+# Exercise 18: Sort Dictionary by Keys
+# Sort a dictionary by its keys and print the sorted dictionary (as an OrderedDict or by converting to a list of tuples).
+'''
+my_dict = {'apple': 3, 'zebra': 1, 'banana': 2, 'cat': 4}
+
+sorted_dic_1 = dict(sorted(my_dict.items()))
+print(sorted_dic_1)
+sorted_dic_2 = sorted(my_dict.items())
+print(sorted_dic_2)
+
+from collections import OrderedDict
+
+sorted_dic_3 = OrderedDict(sorted(my_dict.items()))
+print(sorted_dic_3)
+'''
+
+# Exercise 19: Sort Dictionary by Values
+# Sort a dictionary by its values and print the sorted dictionary (as an OrderedDict or by converting to a list of tuples).
+'''
+my_dict = {'Jessa': 3, 'Kelly': 1, 'Jon': 2, 'Kerry': 4, 'Joy': 1}
+
+sorted_dict_1 = dict(sorted(my_dict.items(), key=lambda el:el[1]))
+print(sorted_dict_1)
+'''
+
+# Exercise 20: Check if All Values are Unique
+# Write a function that takes a dictionary and returns True if all values in the dictionary are unique, False otherwise.
+
+dict1 = {'a': 1, 'b': 2, 'c': 3}             # All values unique
+dict2 = {'x': 10, 'y': 20, 'z': 10}          # Value 10 is duplicated
+dict3 = {} # Empty dictionary (all values are vacuously unique)
+
+def is_unique(el):
+  set_1 = set(list(el.values()))
+  print(set_1, el)
+  if len(set_1) == len(el):
+    print(f'Dictionary: {el} -> All values unique?\n Yes')
+  else:
+    print(f'Dictionary: {el} -> All values unique?\n No')
+
+is_unique(dict1)
+is_unique(dict2)
+is_unique(dict3)
