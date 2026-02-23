@@ -129,7 +129,7 @@ print(nested_student_dict)
 
 # Exercise 10: Initialize dictionary with default values
 # In Python, we can initialize the keys with the same values.
-
+'''
 employees = ['Kelly', 'Emma']
 defaults = {"designation": 'Developer', "salary": 8000}
 
@@ -142,3 +142,79 @@ print(new_dic)
 
 new_dic1 = dict.fromkeys(employees,defaults)
 print(new_dic1)
+'''
+
+# Exercise 11: Create a dictionary by extracting the keys from a given dictionary
+# Write a Python program to create a new dictionary by extracting the mentioned keys from the below dictionary.
+'''
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"}
+
+# Keys to extract
+keys = ["name", "salary"]
+
+new_dic = {k:sample_dict[k] for k in keys}
+print(new_dic)
+'''
+
+# Exercise 12: Delete a list of keys from a dictionary
+'''
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+
+# Keys to remove
+keys = ["name", "salary"]
+
+for el in keys:
+    del sample_dict[el]
+
+print(sample_dict)
+'''
+
+# Exercise 13: Check if a value exists in a dictionary
+# While we know how to check for a key’s presence in a dictionary, it’s sometimes necessary to determine if a specific value exists.
+# Write a Python program to check if the value 200 is present in the provided dictionary.
+'''
+sample_dict = {'a': 100, 'b': 200, 'c': 300}
+
+def check_if_val_exist(dictionary,value):
+    if value in dictionary.values():
+        print(f'{value} is present in the dictionary')
+    else:
+        print(f'{value} is NOT present in the dictionary')
+
+check_if_val_exist(sample_dict,200)
+'''
+
+# Exercise 14: Rename key of a dictionary
+# Write a program to rename a key city to a location in the following dictionary.
+'''
+sample_dict = {
+  "name": "Kelly",
+  "age":25,
+  "salary": 8000,
+  "city": "New york"
+}
+
+sample_dict['location'] = sample_dict.pop('city')
+print(sample_dict)
+'''
+
+# Exercise 15: Get the key of a minimum value
+# Write a code to print the key of a minimum value from the following dictionary.
+
+sample_dict = {
+  'Physics': 82,
+  'Math': 65,
+  'history': 75
+}
+
+min_val = min(sample_dict)
+print(min_val)
