@@ -63,7 +63,7 @@ print(count_words_in_a_file('sample.txt'))
 
 # Exercise 5: Count Total Number of Characters in File
 # Write a function that takes a filename as input and returns the total number of characters in that file (including spaces and newlines).
-
+'''
 def count_words_in_a_file(file):
   try:
     with open(file, 'r') as f:
@@ -71,6 +71,6 @@ def count_words_in_a_file(file):
       return len(content)
   except FileNotFoundError:
     print('Error, "sample.txt" not found')
-  
 
 print(count_words_in_a_file('sample.txt'))
+'''
